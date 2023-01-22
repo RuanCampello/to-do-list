@@ -11,7 +11,7 @@ const addTask = async (task) => {
 	
 	const query = 'INSERT INTO tasks(title, status, created_at) VALUES (?, ?, ?)';
 
-	const [addedTask] = await connection.execute(query, [title, 'pending', dateUTC]);
+	const [addedTask] = await connection.execute(query, [title, 'pendente', dateUTC]);
 	return {insertId: addedTask.insertId};
 };
 
